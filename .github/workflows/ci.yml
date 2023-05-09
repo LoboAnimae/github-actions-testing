@@ -5,6 +5,9 @@ jobs:
   Overall_Job:
     runs-on: ubuntu-latest
     environment: test
+    env:
+      NODE_ENV: ${{ vars.ENV_VAR }}
+      SOME_SECRET: ${{ secrets.SOME_SECRET }}
     steps:
       - uses: actions/checkout@v2
       - name: Setup Node.js v16
