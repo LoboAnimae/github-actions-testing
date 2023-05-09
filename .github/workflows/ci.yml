@@ -1,0 +1,19 @@
+name: Backend Typescript
+run-name: Github actions for the Typescript-Backend
+on: [push, pull_request]
+jobs:
+  Testing:
+    runs-on: ubuntu-latest
+    environment: test
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup Node.js v16
+        uses: actions/setup-node@v2
+        with:
+          node-version: "16"
+      - name: Install dependencies
+        run: npm install
+      - name: Build
+        run: npm run build
+      - name: Running
+        run: npm start
