@@ -1,8 +1,8 @@
 name: Backend Typescript
-run-name: Github actions for the Typescript-Backend
+run-name: Github actions
 on: [push, pull_request]
 jobs:
-  Testing:
+  Overall_Job:
     runs-on: ubuntu-latest
     environment: test
     steps:
